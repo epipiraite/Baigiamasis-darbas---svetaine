@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontaktai</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Pagrindinis</a></li>
+          <li><a href="about.html">Apie mus</a></li>
+          <li><a href="contact.html" class="active">Kontaktai</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact" class="hero">
+      <div class="contact-content">
+        <h2>Susisiekite su mumis</h2>
+        <form id="contact-form">
+          <label for="name">Vardas:</label>
+          <input type="text" id="name" name="name" required /><br /><br />
+
+          <label for="surname">Pavardė:</label>
+          <input type="text" id="surname" name="surname" required /><br /><br />
+
+          <label for="email">El. paštas:</label>
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label for="package">Pasirinkite paketą:</label>
+          <select id="package" name="package" required>
+            <option value="basic">Standartinis</option>
+            <option value="standard">Su privalumais</option>
+            <option value="premium">VIP</option></select
+          ><br /><br />
+
+          <label for="message">Papildoma informacija:</label>
+          <textarea id="message" name="message" rows="5" required></textarea
+          ><br /><br />
+
+          <button type="submit">Išsiųsti</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <ul>
+        <li><a href="index.html">Pagrindinis</a></li>
+        <li><a href="about.html">Apie mus</a></li>
+        <li><a href="contact.html">Kontaktai</a></li>
+      </ul>
+      <p>&copy; 2024 Šampano staliukas | Visos teisės saugomos</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

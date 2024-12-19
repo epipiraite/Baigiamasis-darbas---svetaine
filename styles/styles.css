@@ -1,0 +1,486 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f5eacf; /* Light rustic background color */
+  color: #4e3629; /* Dark brown text */
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/hero.png"); /* Background image */
+  background-size: cover; /* Makes the image cover the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  grid-template-rows: auto 1fr auto; /* Defines the grid layout */
+  height: 100vh; /* Full height of the viewport */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  padding-bottom: 100px;
+  min-height: 100vh; /* Full viewport height */
+  background-attachment: fixed; /* Ensures the background image stays fixed */
+}
+
+h1,
+h2,
+h3 {
+  color: #4e3629; /* Dark brown color for headlines */
+}
+h1 {
+  font-size: 3rem; /* Larger font size for h1 */
+  margin-bottom: 20px; /* Add space below the headline */
+}
+h2 {
+  font-size: 2rem; /* Larger font size for h2 */
+}
+
+/* Full-width header with more space around the menu */
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #3c5a3b; /* Footer background */
+  color: #f5eacf;
+}
+nav {
+  display: flex; /* Use Flexbox to arrange menu items in a row */
+  justify-content: center; /* Center the nav items horizontally */
+  width: 100%;
+}
+nav ul {
+  display: flex; /* Ensure list items are in a row */
+  flex-wrap: nowrap; /* Prevent wrapping to a new line */
+  justify-content: center; /* Center the nav items horizontally */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  list-style: none; /* Remove default bullet points */
+}
+
+header nav ul {
+  display: flex; /* Ensure list items are in a row */
+  flex-wrap: nowrap; /* Prevent wrapping to a new line */
+  justify-content: center; /* Center the nav items horizontally */
+}
+
+nav ul li {
+  margin: 0 20px; /* Add margin between menu items */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f5eacf; /* Light background color for nav links */
+  font-weight: bold;
+  transition: color 0.3s ease; /* Smooth color transition for hover effect */
+  padding: 10px 20px; /* Add some padding for clickable area */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
+/* Active page menu link */
+nav ul li a.active {
+  color: #4e3629; /* Earth green color for active page */
+  text-decoration: underline; /* Underline the active link */
+  background-color: #f5eacf; /* Light background for active state */
+  border-radius: 5px; /* Rounded corners for active link */
+  padding: 10px 20px; /* Add padding to active link */
+}
+
+/* Hover effect on menu links */
+nav ul li a:hover {
+  color: lightburlywood; /* Earth green color on hover */
+  text-decoration: underline; /* Underline the links on hover */
+}
+
+/* Hero section styling */
+.hero {
+  padding: 60px 20px; /* Add padding to the hero section */
+  text-align: center;
+  width: 100%; /* Full width of the screen */
+  max-width: 1200px; /* Limit maximum width of the hero section */
+  margin: 0 auto; /* Center the hero section */
+}
+
+/* Package container for Home page */
+.package-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.package {
+  border: 2px solid #4e3629;
+  padding: 20px;
+  width: 100%;
+  max-width: 30%;
+  background-color: #f5eacf;
+  margin-bottom: 20px;
+}
+
+.package h3 {
+  color: #4e3629;
+}
+#packages {
+  text-align: center;
+}
+/* Main content section */
+.main-content {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Business Story */
+.business-story {
+  margin-bottom: 40px;
+  text-align: center; /* Center the content */
+}
+
+.business-story h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.business-story p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.meet-the-team {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center; /* Center the headline */
+}
+
+.meet-the-team h2 {
+  font-size: 2rem;
+  margin-bottom: 20px; /* Adds gap between headline and team member boxes */
+}
+
+.meet-the-team-container {
+  display: flex;
+  gap: 20px; /* Adds space between the boxes */
+  justify-content: center; /* Centers the boxes horizontally */
+  flex-wrap: wrap;
+}
+
+.team-member {
+  background-color: #3c5a3b; /* Same green color as footer */
+  padding: 20px;
+  border: 2px solid #4e3629;
+  width: 250px; /* Fixed width for team member boxes */
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: #f5eacf; /* Text color to contrast the green background */
+  width: 200px;
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  max-width: 120px;
+  margin-bottom: 15px;
+}
+
+.team-member p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+  margin-bottom: 40px;
+}
+
+.why-choose-us h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.why-choose-us ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.why-choose-us li {
+  font-size: 1.2rem; /* Adjust size to make text larger */
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.why-choose-us li::before {
+  content: "✓"; /* Use the check mark character */
+  font-size: 2rem; /* Make the check mark bigger */
+  color: #a2c776; /* Brighten the check mark color (e.g., Earth Green) */
+  margin-right: 10px; /* Adds space between check mark and text */
+  vertical-align: middle; /* Aligns the check mark with text */
+}
+
+/* Testimonials */
+.testimonials {
+  margin-bottom: 40px;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.testimonial {
+  text-align: center;
+  background-color: #f5eacf;
+  border: 2px solid #4e3629;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 1.5em; /* Reduced padding */
+  max-width: 600px; /* Limit the width of testimonials */
+  margin: 20px auto; /* Center the testimonial and add spacing */
+}
+
+.testimonial p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Gallery */
+.gallery {
+  margin-bottom: 40px;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.image-gallery img {
+  width: 30%;
+  max-width: 350px;
+  border: 2px solid #4e3629;
+  border-radius: 10px;
+}
+
+/* Call to Action */
+.cta {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px; /* Add margin to prevent overlap with the footer */
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #3c5a3b; /* Dark brown */
+  color: #f5eacf;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Add margin above the button */
+}
+
+.cta-button:hover,
+.btn:hover {
+  background-color: #3c5a3b; /* Darker brown */
+  transform: scale(1.05); /* Slightly grow the button */
+}
+
+.btn {
+  background-color: #3c5a3b; /* Dark brown */
+  color: #f5eacf;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+footer {
+  width: 100%; /* Full width of the screen */
+  text-align: center;
+  padding: 20px;
+  background-color: #3c5a3b; /* Footer background */
+  color: #f5eacf;
+  bottom: 0; /* Aligns the footer to the bottom of the viewport */
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin: 0;
+}
+
+footer ul li {
+  margin: 0 20px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #f5eacf; /* Light color for footer links */
+  font-weight: bold;
+  transition: color 0.3s ease; /* Smooth color transition for hover effect */
+}
+
+/* Hover effect for footer links */
+footer ul li a:hover {
+  color: #d1bfa7; /* Earth green color on hover */
+  text-decoration: underline; /* Underline the links on hover */
+}
+
+/* Form Styles */
+form {
+  max-width: 600px; /* Limit form width on large screens */
+  width: 100%; /* Full width on smaller screens */
+  margin: 0 auto; /* Center the form */
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%; /* Full width within the form container */
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #5c4033; /* Brown border */
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Button styling */
+button {
+  background-color: #3c5a3b; /* Dark brown */
+  color: white; /* White text */
+  padding: 12px 24px; /* Larger button size */
+  font-size: 16px; /* Increased font size */
+  border: none; /* No border */
+  border-radius: 30px; /* Fully rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+button:hover {
+  background-color: #3c5a3b; /* Darker brown on hover */
+}
+@media screen and (max-width: 768px) {
+  .package-container {
+    flex-direction: column; /* Stack the packages vertically */
+    align-items: center; /* Center the items */
+    padding: 0 10px;
+  }
+  .package {
+    width: 100%; /* Make the package full width */
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+    padding: 20px;
+  }
+  .package h3 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+  .package p {
+    font-size: 1rem; /* Adjust font size for better readability */
+    margin-bottom: 10px;
+  }
+  .package .price {
+    font-size: 1.2rem; /* Make price stand out */
+    color: #3c5a3b; /* Green color for the price */
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .meet-the-team-container {
+    flex-direction: column;
+    align-items: center; /* Center team member content on mobile */
+  }
+  .cta-button {
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+  .hero {
+    padding: 40px;
+  }
+  footer {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Reduce padding for smaller screens */
+  .hero {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem; /* Broader text */
+  }
+  .package h3 {
+    font-size: 1.3rem;
+  }
+
+  .package p {
+    font-size: 1.1rem; /* Broader text */
+  }
+  .package .price {
+    font-size: 1.2rem; /* Reduce price font size */
+  }
+
+  .package-container {
+    padding: 0 5px; /* Reduce padding for smaller screens */
+  }
+  .package {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  /* Footer adjustments */
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+.about-page {
+  background-image: none; /* Removes the background image */
+  background-color: #f5eacf; /* Add a background color if needed */
+}
